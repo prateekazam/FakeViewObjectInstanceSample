@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="12.2.1.0.31" id="FakeViewObjectExamplePageDef"
+                Package="view.pageDefs">
+    <parameters/>
+    <executables>
+        <variableIterator id="variables"/>
+    </executables>
+    <bindings>
+        <methodAction id="callingFakeMethod" Action="invokeMethod" MethodName="helloFake" IsViewObjectMethod="false"
+                      DataControl="AppModuleDataControl" InstanceName="FakeRb"></methodAction>
+        <methodAction id="moduleMethod" RequiresUpdateModel="true" Action="invokeMethod" MethodName="moduleMethod"
+                      IsViewObjectMethod="false" DataControl="AppModuleDataControl"
+                      InstanceName="data.AppModuleDataControl.dataProvider"/>
+    </bindings>
+</pageDefinition>
